@@ -18,5 +18,8 @@
     <ClCompile Include="4_median_of_two_sorted_arrays.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="contest_biweekly_191.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

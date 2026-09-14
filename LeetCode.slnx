@@ -3,5 +3,9 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="LeetCode/LeetCode.vcxproj" />
+  <Project Path="3483_Unique3DigitEvenNumbers/3483_Unique3DigitEvenNumbers.vcxproj" Id="b1f10f39-fed8-476a-8ccd-bc87eaf029c0" />
+  <Project Path="3_LongestSubstringWithoutRepeatingCharacters/3_LongestSubstringWithoutRepeatingCharacters.vcxproj" Id="6e5f929c-01bd-4723-8216-ade382788f87" />
+  <Project Path="4_MedianOfTwoSortedArrays/4_MedianOfTwoSortedArrays.vcxproj" Id="ca66ee6c-6601-47ec-a415-8c8da9964b8c" />
+  <Project Path="835_ImageOverlap/835_ImageOverlap.vcxproj" Id="e79cbe65-af4c-41a5-a463-ca816a0c39ce" />
+  <Project Path="ContestBiweekly191/ContestBiweekly191.vcxproj" Id="25c6fefb-11c9-47c2-89e3-892bd6288ff2" />
 </Solution>

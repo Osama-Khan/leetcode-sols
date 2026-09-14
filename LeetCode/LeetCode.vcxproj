@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{9e01890d-9a93-4d68-a02f-ca98995fab76}</ProjectGuid>
+    <ProjectGuid>{931FD82D-D0B4-A193-6A63-3767D4CBDEDC}</ProjectGuid>
     <RootNamespace>LeetCode</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="4_median_of_two_sorted_arrays.cpp" />
+    <ClCompile Include="contest_biweekly_191.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

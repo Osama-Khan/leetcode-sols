@@ -39,15 +39,15 @@ public:
                         if (right + 1 < n && s[right] == s[right + 1]) {
                             int offsetCounter = 2;
                             while (right + offsetCounter < n &&
-                                   s[right] == s[right + offsetCounter]) {
+                                s[right] == s[right + offsetCounter]) {
                                 offsetCounter++;
                             }
 
                             // offsetCounter should be at a non unique char or
                             // out of bounds, reset window and start loop again.
-                             right += offsetCounter - 1;
-              left = right - 1; // counter for loop increment
-              break;
+                            right += offsetCounter - 1;
+                            left = right - 1; // counter for loop increment
+                            break;
                         }
 
                         // Update window L and char map
