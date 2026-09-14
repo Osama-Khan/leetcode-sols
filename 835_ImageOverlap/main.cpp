@@ -65,11 +65,11 @@ private:
 	}
 
 	void moveRight(vector<vector<int>>& img) const {
-		move(img, 'r');
+		move(img, false);
 	}
 
 	void moveDown(vector<vector<int>>& img) const {
-		move(img, 'd');
+		move(img, true);
 	}
 
 	int getLargerCount(int currentCount, vector<vector<int>>& img1, vector<vector<int>>& img2) {
@@ -106,15 +106,13 @@ int main() {
 	Solution sol;
 
 	vector<vector<int>> img1 = {
-		{1, 1, 0},
-		{0, 1, 0},
-		{0, 1, 0}
+		{0, 1},
+		{1, 1}
 	};
 
 	vector<vector<int>> img2 = {
-		{0, 0, 0},
-		{0, 1, 1},
-		{0, 0, 1}
+		{1, 1},
+		{1, 0}
 	};
 
 	cout << endl << sol.largestOverlap(img1, img2) << endl;
