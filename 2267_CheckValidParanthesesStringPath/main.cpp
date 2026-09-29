@@ -99,6 +99,94 @@ public:
 	}
 };
 
+// Array based solution
+class Solution2 {
+	vector<vector<vector<bool>>>invalidPathCache;
+
+public:
+	bool hasValidRecursive(vector<vector<char>>& grid, size_t i, size_t j, int balance) {
+		auto const m = grid.size();
+		auto const n = grid[0].size();
+
+		int const remainingM = m - i - 1;
+		int const remainingN = n - j - 1;
+		int const remainingCells = remainingM + remainingN;
+
+		char const chr = grid[i][j];
+
+		if (chr == '(') {
+			balance += 1;
+		}
+
+		if (chr == ')') {
+			balance -= 1;
+		}
+
+		// Balance should never be negative for valid cases
+		if (balance < 0) {
+			return false;
+		}
+
+		// Not enough cells to fix balance
+		if (remainingCells < balance) {
+			invalidPathCache[i][j][balance] = true;
+			return false;
+		}
+
+		// Check if path invalid in cache
+		if (invalidPathCache[i][j][balance]) {
+			return false;
+		}
+
+		// Reached end
+		if (i == m - 1 && j == n - 1) {
+			return balance == 0;
+		}
+
+		// Can go down
+		if (i < m - 1) {
+			bool const res = hasValidRecursive(grid, i + 1, j, balance);
+			if (res) return res;
+			invalidPathCache[i][j][balance] = true;
+		}
+
+		// Can go right
+		if (j < n - 1) {
+			bool const res = hasValidRecursive(grid, i, j + 1, balance);
+			if (res) return res;
+			invalidPathCache[i][j][balance] = true;
+		}
+
+		return false;
+	}
+
+	bool hasValidPath(vector<vector<char>>& grid) {
+		auto const m = grid.size();
+		auto const n = grid[0].size();
+
+		if ((m + n - 1) % 2 != 0) {
+			// Odd cant be valid
+			return false;
+		}
+
+		// First and Last must be ( and ) respectively
+		if (grid[0][0] != '(' || grid[m - 1][n - 1] != ')') {
+			return false;
+		}
+
+		invalidPathCache = vector(
+			m,
+			vector(
+				n,
+				vector(
+					(m + n) / 2 + 1, false
+				)
+			)
+		);
+
+		return hasValidRecursive(grid, 0, 0, 0);
+	}
+};
 
 int main() {
 	Solution sol;
