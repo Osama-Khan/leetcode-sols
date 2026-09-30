@@ -5,6 +5,11 @@
 
 using namespace std;
 
+/// <summary>
+/// Simulates two subsequences using depths, deciding assignments by comparing
+/// depths of subsequences and picking the smaller depth as the subsequence to
+/// assign to.
+/// </summary>
 class Solution {
 public:
 	vector<int> maxDepthAfterSplit(string seq) {
