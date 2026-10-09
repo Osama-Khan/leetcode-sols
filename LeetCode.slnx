@@ -3,9 +3,24 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
+  <Project Path="1021_RemoveOutermostParantheses/1021_RemoveOutermostParantheses.vcxproj" Id="c5dafd5e-4a57-4cd8-b07c-3b4045fe448d" />
+  <Project Path="1111_MaximumNestingDepth/1111_MaximumNestingDepth.vcxproj" Id="a3d4326e-d915-4d10-94b3-cca0d6afe926" />
+  <Project Path="1190_ReverseSubstrings/1190_ReverseSubstrings.vcxproj" Id="8e37ed28-4f9d-45c4-9a8e-ae9b9389e024" />
+  <Project Path="1541_MinimumInsertions/1541_MinimumInsertions.vcxproj" Id="7410464a-0c4a-41dd-99b7-657eb059af6d" />
+  <Project Path="1614_MaximumNestingDepth/1614_MaximumNestingDepth.vcxproj" Id="8b1f327e-f7fe-486f-b843-3af0b7cfce44" />
+  <Project Path="1807_EvaluateTheBracketPairsOfAString/1807_EvaluateTheBracketPairsOfAString.vcxproj" Id="7dc3bb8c-7ff0-4db0-90e7-63eba4fc83b5" />
+  <Project Path="20_ValidParanthese/20_ValidParanthese.vcxproj" Id="a5a7e189-a47f-4ee9-936e-a782504fc50c" />
+  <Project Path="2267_CheckValidParanthesesStringPath/2267_CheckValidParanthesesStringPath.vcxproj" Id="87f8ed24-2e90-4c43-b195-964f0a660d8c" />
+  <Project Path="22_GenerateParantheses/22_GenerateParantheses.vcxproj" Id="4316ffb5-4e75-444a-b5f3-eead0fcc8002" />
+  <Project Path="301_RemoveInvalidParentheses/301_RemoveInvalidParentheses.vcxproj" Id="4dc8e77d-3466-4f2a-bdbb-15c68b6492db" />
+  <Project Path="32_LongestValidParantheses/32_LongestValidParantheses.vcxproj" Id="2069f215-714c-47e8-943a-f85efff62d20" />
   <Project Path="3483_Unique3DigitEvenNumbers/3483_Unique3DigitEvenNumbers.vcxproj" Id="b1f10f39-fed8-476a-8ccd-bc87eaf029c0" />
+  <Project Path="3550_SmallestIndexWithDigitSumEqualToIndex/3550_SmallestIndexWithDigitSumEqualToIndex.vcxproj" Id="a1183057-d6e9-4a48-b60e-5d746d59831b" />
   <Project Path="3_LongestSubstringWithoutRepeatingCharacters/3_LongestSubstringWithoutRepeatingCharacters.vcxproj" Id="6e5f929c-01bd-4723-8216-ade382788f87" />
   <Project Path="4_MedianOfTwoSortedArrays/4_MedianOfTwoSortedArrays.vcxproj" Id="ca66ee6c-6601-47ec-a415-8c8da9964b8c" />
+  <Project Path="678_ValidParenthesisString/678_ValidParenthesisString.vcxproj" Id="cf710c1f-8fe1-4408-8553-3f3bbf4898b1" />
   <Project Path="835_ImageOverlap/835_ImageOverlap.vcxproj" Id="e79cbe65-af4c-41a5-a463-ca816a0c39ce" />
+  <Project Path="856_ScoreOfParentheses/856_ScoreOfParentheses.vcxproj" Id="26d96b11-b11d-4406-8a1b-2359dd09183e" />
+  <Project Path="921_MinimumAddToMakeParanthesesValid/921_MinimumAddToMakeParanthesesValid.vcxproj" Id="5a501dc8-1be4-474b-9358-bbfc5027ce72" />
   <Project Path="ContestBiweekly191/ContestBiweekly191.vcxproj" Id="25c6fefb-11c9-47c2-89e3-892bd6288ff2" />
 </Solution>
