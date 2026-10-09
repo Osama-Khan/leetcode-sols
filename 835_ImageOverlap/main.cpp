@@ -136,17 +136,6 @@ public:
 			imgV = img1;
 		}
 
-		//// Up and left
-		//for (int i = 0; i < n; i++) {
-		//	vector<vector<int>> imgH = imgV;
-		//	for (int j = 0; j < n - 1; j++) {
-		//		moveLeft(imgH);
-		//		count = getLargerCount(count, imgH, img2);
-		//	}
-		//	moveUp(imgV);
-		//	count = getLargerCount(count, imgV, img2);
-		//}
-
 		return count;
 	}
 
