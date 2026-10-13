@@ -11,25 +11,23 @@ class Solution {
 public:
     long long maxAlternatingSum(vector<int>& nums) {
         const size_t n = nums.size();
-        // Sort the array
+
+        // Square the array
         for (size_t i = 0; i < n; i++) {
-            for (size_t j = i; j < n; j++) {
-                // Abs comparisons cuz squaring would nullify negs
-                if (abs(nums[i]) > abs(nums[j])) {
-                    int tmp = nums[i];
-                    nums[i] = nums[j];
-                    nums[j] = tmp;
-                }
-            }
+            nums[i] *= nums[i];
         }
 
-        // Initial value
-        const size_t midPoint = n/2;
-        long long output = pow(nums[midPoint], 2);
+        // Sort
+        sort(nums.begin(), nums.end());
+
+        const size_t midPoint = n / 2;
+
+        // Initial value is at the midpoint, the first value in the larger values half
+        long long output = nums[midPoint];
 
         for (size_t i = 0, j = midPoint + 1; i < midPoint; i++, j++) {
-            const int toSub = pow(nums[i], 2);
-            const int toSum = j < n ? pow(nums[j], 2) : 0;
+            const int toSub = nums[i];
+            const int toSum = j < n ? nums[j] : 0;
 
             output -= toSub;
             output += toSum;
