@@ -1,23 +1,26 @@
-#include <vector>
 #include <bitset>
+#include <vector>
 
 using namespace std;
 
 class Solution {
 public:
     int sumCounts(vector<int>& nums) {
-        static bitset<101> seen;
-        int n=nums.size(), ans=0;
-        for(int l=0; l<n; l++){
-            seen.reset();
-            int cnt=0;
-            for(int r=l; r<n; r++){
-                int x=nums[r];
-                cnt+=(seen[x]==0);
-                seen[x]=1;
-                ans+=cnt*cnt;
+        int sum = 0;
+        const int n = nums.size();
+
+        for (size_t i = 0; i < n; i++) {
+            size_t toPick = i + 1;
+            int cnt = 0;
+            bitset<101> seen;
+            for (size_t j = i; j < n; j++) {
+                int const num = nums[j];
+                cnt += seen[num] ? 0 : 1;
+                seen[num] = 1;
+                sum += cnt * cnt;
             }
         }
-        return ans;
+
+        return sum;
     }
 };
