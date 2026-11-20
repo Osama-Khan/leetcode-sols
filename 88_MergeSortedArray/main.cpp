@@ -12,13 +12,12 @@ public:
         // Pointer for nums2 array progress
             ptr = n-1;
 
+        // Reverse traverse
         while (r >= 0 && l >= 0 && ptr >= 0) {
           if (nums1[l] > nums2[ptr]) {
-            // nums1 has bigger element
             nums1[r] = nums1[l];
             l--;
           } else {
-            // nums2 has bigger element
             nums1[r] = nums2[ptr];
             ptr--;
           }
