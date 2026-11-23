@@ -41,6 +41,47 @@ public:
   }
 };
 
+// Works similarly to the approach in ProductOfNumbers, but without a dedicated var for zero tracking.
+// This algo clears pfxMults whenever encountering 0. We can then use k > arrSize check to figure out
+// if there would have been a 0 in the k range.
+class ProductOfNumbers2 {
+private:
+  std::vector<int> pfxMults;
+
+public:
+  ProductOfNumbers2() = default;
+
+  void add(int num) {
+    // Reset prefixes for zero num
+    if (num == 0) {
+        pfxMults.clear();
+        return;
+    }
+
+    int prev = 1;
+    // Multiply with previous elements if pfxMults has elements
+    if (!pfxMults.empty()) {
+      prev = pfxMults.back();
+    }
+
+    pfxMults.push_back(prev * num);
+  }
+
+  int getProduct(int k) {
+    // k being > the size of pfxMults indicates a zero occurring in its range,
+    // leading to the result being 0.
+    if (k > pfxMults.size()) return 0;
+
+    // k being size of our elements would just return the final product
+    if (k == pfxMults.size()) return pfxMults.back();
+
+    // Divide the latest prefix with the prefix just out of range of k to get
+    // product of k elements.
+    int divisor = pfxMults[pfxMults.size() - k - 1];
+    return pfxMults.back() / divisor;
+  }
+};
+
 /**
  * Your ProductOfNumbers object will be instantiated and called as such:
  * ProductOfNumbers* obj = new ProductOfNumbers();
